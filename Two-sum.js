@@ -22,3 +22,5 @@ function twoSum(numbers, target) {
     if (typeof hash[tmp] !== 'undefined') return [i, hash[tmp]]
   }
 }
+
+// or
