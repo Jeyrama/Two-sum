@@ -12,3 +12,13 @@ twoSum([1, 2, 3], 4) // returns [0, 2] or [2, 0]
 
 
 // Solution
+
+function twoSum(numbers, target) {
+  let tmp, hash = {};
+  numbers.forEach(function(a, i){ hash[a] = i; })
+
+  for (let i = 0; i < numbers.length; i++) {
+    tmp = target - numbers[i];
+    if (typeof hash[tmp] !== 'undefined') return [i, hash[tmp]]
+  }
+}
